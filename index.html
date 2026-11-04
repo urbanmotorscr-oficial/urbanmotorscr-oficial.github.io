@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Urban Motors CR. Vehículos seleccionados en Costa Rica.">
+<title>Urban Motors CR | Vehículos seleccionados</title>
+<style>
+:root {
+  --red: #e32636;
+  --black: #090a0c;
+  --card: #15171b;
+  --white: #f6f6f6;
+  --gray: #a4a7ad;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(9,10,12,.96);
+  border-bottom: 1px solid #292b30;
+  padding: 17px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { font-size: 21px; font-weight: 900; letter-spacing: 1px; }
+.brand span { color: var(--red); }
+nav { display: flex; gap: 24px; font-size: 13px; }
+nav a:hover { color: var(--red); }
+.hero {
+  min-height: 540px;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, #090a0c 5%, rgba(9,10,12,.88) 48%, rgba(9,10,12,.25)),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+.hero-content { max-width: 650px; }
+.tag { color: var(--red); letter-spacing: 4px; font-size: 12px; font-weight: bold; }
+h1 { font-size: clamp(42px, 7vw, 76px); line-height: 1.02; margin: 18px 0; }
+h1 span { color: var(--red); }
+.hero p { color: #d0d0d0; line-height: 1.7; max-width: 480px; }
+.btn {
+  display: inline-block;
+  padding: 15px 23px;
+  margin: 15px 9px 0 0;
+  border-radius: 5px;
+  background: var(--red);
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+.btn.outline { background: transparent; border: 1px solid white; }
+section { padding: 75px 7%; }
+.section-title { text-align: center; margin-bottom: 38px; }
+.section-title h2 { font-size: 32px; margin: 0 0 10px; }
+.section-title p { color: var(--gray); font-size: 14px; }
+.line { width: 55px; height: 3px; background: var(--red); margin: 15px auto; }
+.inventory {
+  max-width: 850px;
+  margin: auto;
+  background: var(--card);
+  border: 1px solid #292b30;
+  border-radius: 12px;
+  padding: 35px 22px;
+  text-align: center;
+}
+.inventory .icon { font-size: 38px; }
+.inventory h3 { font-size: 21px; }
+.inventory p { color: var(--gray); line-height: 1.6; font-size: 14px; }
+.sell {
+  background: linear-gradient(120deg, #17191e, #090a0c);
+  border-top: 1px solid #292b30;
+  border-bottom: 1px solid #292b30;
+  text-align: center;
+}
+.sell h2 { font-size: clamp(28px, 5vw, 43px); }
+.sell h2 span { color: var(--red); }
+.sell p { color: #c1c1c1; line-height: 1.7; }
+.features {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+  max-width: 950px;
+  margin: auto;
+}
+.feature {
+  text-align: center;
+  background: var(--card);
+  padding: 25px 12px;
+  border-radius: 9px;
+  border: 1px solid #292b30;
+}
+.feature strong { display: block; margin: 10px 0; }
+.feature p { color: var(--gray); font-size: 13px; }
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--gray);
+  font-size: 13px;
+  border-top: 1px solid #292b30;
+}
+footer strong { color: white; }
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 20;
+  background: #20c66b;
+  color: #07130c;
+  font-weight: bold;
+  padding: 15px 19px;
+  border-radius: 40px;
+  box-shadow: 0 5px 22px #0009;
+}
+@media(max-width:650px) {
+  nav { gap: 11px; font-size: 11px; }
+  .brand { font-size: 16px; }
+  header { padding: 16px 4%; }
+  .hero { min-height: 500px; padding: 70px 7%; }
+  section { padding: 60px 6%; }
+  .features { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">URBAN MOTORS <span>CR.</span></div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#inventario">Inventario</a>
+    <a href="#vender">Vendé tu auto</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="tag">COSTA RICA 🇨🇷</div>
+    <h1>ENCONTRÁ TU<br>PRÓXIMO <span>VEHÍCULO.</span></h1>
+    <p>Vehículos seleccionados, atención personalizada y confianza en cada negocio.</p>
+    <a class="btn" href="#inventario">VER INVENTARIO →</a>
+    <a class="btn outline" href="#vender">VENDER MI VEHÍCULO</a>
+  </div>
+</section>
+
+<section id="inventario">
+  <div class="section-title">
+    <div class="tag">URBAN MOTORS CR</div>
+    <h2>NUESTRO INVENTARIO</h2>
+    <div class="line"></div>
+    <p>Encontrá el vehículo ideal para vos.</p>
+  </div>
+  <div class="inventory">
+    <div class="icon">🚘</div>
+    <h3>PRÓXIMAMENTE</h3>
+    <p>Estamos preparando nuestro catálogo de vehículos seleccionados.<br>
+    Muy pronto encontrarás aquí todas nuestras opciones disponibles.</p>
+    <a class="btn" href="https://api.whatsapp.com/send?phone=50662364204">CONSULTAR POR WHATSAPP</a>
+  </div>
+</section>
+
+<section class="sell" id="vender">
+  <div class="tag">SERVICIO DE VENTA</div>
+  <h2>¿QUERÉS VENDER <span>TU VEHÍCULO?</span></h2>
+  <p>Nosotros te ayudamos a promocionarlo y encontrar un comprador.<br>
+  Contactanos y contanos sobre tu vehículo.</p>
+  <a class="btn" href="https://api.whatsapp.com/send?phone=50662364204">QUIERO VENDER MI AUTO →</a>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>¿POR QUÉ URBAN MOTORS?</h2>
+    <div class="line"></div>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <div>🛡️</div>
+      <strong>CONFIANZA</strong>
+      <p>Atención clara y responsable.</p>
+    </div>
+    <div class="feature">
+      <div>🤝</div>
+      <strong>TRANSPARENCIA</strong>
+      <p>Comunicación durante el proceso.</p>
+    </div>
+    <div class="feature">
+      <div>🚘</div>
+      <strong>ATENCIÓN PERSONALIZADA</strong>
+      <p>Te acompañamos en cada paso.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <strong>URBAN MOTORS CR</strong>
+  <p>Vehículos seleccionados · Costa Rica 🇨🇷</p>
+  <p>© 2026 Urban Motors CR. Todos los derechos reservados.</p>
+</footer>
+
+<a class="whatsapp" href="https://api.whatsapp.com/send?phone=50662364204" target="_blank">WhatsApp ↗</a>
+
+</body>
+</html>
