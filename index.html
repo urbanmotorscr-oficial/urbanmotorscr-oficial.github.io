@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Urban Motors CR: catálogo de vehículos seleccionados en Costa Rica. Consultá por WhatsApp o ofrecé tu vehículo.">
+<meta name="description" content="Urban Motors CR: catálogo de vehículos seleccionados en Costa Rica.">
 <meta name="theme-color" content="#090a0c">
 <title>Urban Motors CR | Catálogo de vehículos</title>
 <style>
@@ -30,68 +29,80 @@ dialog{width:min(760px,94vw);max-height:90vh;overflow:auto;background:#111318;co
 </head>
 <body>
 <header>
-  <a class="brand" href="#inicio">URBAN MOTORS <span>CR.</span></a>
-  <nav aria-label="Navegación principal">
-    <a href="#inicio">INICIO</a><a href="#inventario">INVENTARIO</a><a href="#vender">VENDÉ TU AUTO</a>
-  </nav>
+<a class="brand" href="#inicio">URBAN MOTORS <span>CR.</span></a>
+<nav aria-label="Navegación principal">
+<a href="#inicio">INICIO</a><a href="#inventario">INVENTARIO</a><a href="#vender">VENDÉ TU AUTO</a>
+</nav>
 </header>
 <main>
 <section class="hero" id="inicio">
-  <div class="hero-content">
-    <div class="tag">COSTA RICA 🇨🇷</div>
-    <h1>ENCONTRÁ TU<br>PRÓXIMO <span>VEHÍCULO.</span></h1>
-    <p>Vehículos seleccionados, atención personalizada y confianza en cada negocio.</p>
-    <a class="btn" href="#inventario">VER INVENTARIO →</a>
-    <a class="btn outline" href="#vender">VENDER MI VEHÍCULO</a>
-  </div>
+<div class="hero-content">
+<div class="tag">COSTA RICA 🇨🇷</div>
+<h1>ENCONTRÁ TU<br>PRÓXIMO <span>VEHÍCULO.</span></h1>
+<p>Vehículos seleccionados, atención personalizada y confianza en cada negocio.</p>
+<a class="btn" href="#inventario">VER INVENTARIO →</a>
+<a class="btn outline" href="#vender">VENDER MI VEHÍCULO</a>
+</div>
 </section>
 <section id="inventario">
-  <div class="section-title"><div class="tag">URBAN MOTORS CR</div><h2>NUESTRO INVENTARIO</h2><div class="line"></div><p>Explorá los vehículos disponibles y encontrá el ideal para vos.</p></div>
-  <div class="filters" aria-label="Filtros de vehículos">
-    <input class="field" id="search" type="search" placeholder="Buscar marca o modelo..." aria-label="Buscar marca o modelo">
-    <select class="field" id="brandFilter" aria-label="Filtrar por marca"><option value="">Todas las marcas</option></select>
-    <select class="field" id="yearFilter" aria-label="Filtrar por año"><option value="">Todos los años</option></select>
-    <select class="field" id="priceFilter" aria-label="Ordenar por precio"><option value="">Ordenar por precio</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option></select>
-  </div>
-  <div class="inventory-grid" id="inventoryGrid">
-    <div class="empty"><div class="icon">🚘</div><h3>PRÓXIMAMENTE</h3><p>Estamos preparando nuestro catálogo de vehículos seleccionados. Muy pronto vas a encontrar aquí todas las opciones disponibles.</p><a class="btn" href="https://api.whatsapp.com/send?phone=50662364204&text=Hola%20Urban%20Motors%2C%20quisiera%20consultar%20por%20veh%C3%ADculos%20disponibles.">CONSULTAR POR WHATSAPP</a></div>
-  </div>
+<div class="section-title"><div class="tag">URBAN MOTORS CR</div><h2>NUESTRO INVENTARIO</h2><div class="line"></div><p>Explorá los vehículos disponibles y encontrá el ideal para vos.</p></div>
+<div class="filters" aria-label="Filtros de vehículos">
+<input class="field" id="search" type="search" placeholder="Buscar marca o modelo..." aria-label="Buscar marca o modelo">
+<select class="field" id="brandFilter" aria-label="Filtrar por marca"><option value="">Todas las marcas</option></select>
+<select class="field" id="yearFilter" aria-label="Filtrar por año"><option value="">Todos los años</option></select>
+<select class="field" id="priceFilter" aria-label="Ordenar por precio"><option value="">Ordenar por precio</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option></select>
+</div>
+<div class="inventory-grid" id="inventoryGrid"></div>
 </section>
 <section class="sell" id="vender">
-  <div class="tag">SERVICIO DE VENTA</div><h2>¿QUERÉS VENDER <span>TU VEHÍCULO?</span></h2>
-  <p>Nosotros te ayudamos a promocionarlo y encontrar un comprador.<br>Completá los datos y conversamos por WhatsApp.</p>
-  <form class="seller-form" id="sellerForm">
-    <div><label for="ownerName">Tu nombre *</label><input class="field" id="ownerName" required placeholder="Nombre y apellido"></div>
-    <div><label for="ownerPhone">Tu teléfono *</label><input class="field" id="ownerPhone" required type="tel" placeholder="8888-8888"></div>
-    <div><label for="carMake">Marca *</label><input class="field" id="carMake" required placeholder="Ej. Toyota"></div>
-    <div><label for="carModel">Modelo *</label><input class="field" id="carModel" required placeholder="Ej. RAV4"></div>
-    <div><label for="carYear">Año *</label><input class="field" id="carYear" required type="number" min="1950" max="2035" placeholder="Ej. 2020"></div>
-    <div><label for="carPrice">Precio esperado (₡)</label><input class="field" id="carPrice" inputmode="numeric" placeholder="Ej. 8500000"></div>
-    <div class="full"><label for="carDetails">Información adicional</label><textarea class="field" id="carDetails" placeholder="Kilometraje, transmisión, estado y otros detalles"></textarea></div>
-    <div class="full"><button class="btn" type="submit">ENVIAR DATOS POR WHATSAPP →</button></div>
-  </form>
-  <p style="font-size:11px;color:#92969e">Al enviar, se abrirá WhatsApp con la información que ingresaste. No se guarda en esta página.</p>
+<div class="tag">SERVICIO DE VENTA</div><h2>¿QUERÉS VENDER <span>TU VEHÍCULO?</span></h2>
+<p>Nosotros te ayudamos a promocionarlo y encontrar un comprador.<br>Completá los datos y conversamos por WhatsApp.</p>
+<form class="seller-form" id="sellerForm">
+<div><label for="ownerName">Tu nombre *</label><input class="field" id="ownerName" required placeholder="Nombre y apellido"></div>
+<div><label for="ownerPhone">Tu teléfono *</label><input class="field" id="ownerPhone" required type="tel" placeholder="8888-8888"></div>
+<div><label for="carMake">Marca *</label><input class="field" id="carMake" required placeholder="Ej. Toyota"></div>
+<div><label for="carModel">Modelo *</label><input class="field" id="carModel" required placeholder="Ej. RAV4"></div>
+<div><label for="carYear">Año *</label><input class="field" id="carYear" required type="number" min="1950" max="2035" placeholder="Ej. 2020"></div>
+<div><label for="carPrice">Precio esperado (₡)</label><input class="field" id="carPrice" inputmode="numeric" placeholder="Ej. 8500000"></div>
+<div class="full"><label for="carDetails">Información adicional</label><textarea class="field" id="carDetails" placeholder="Kilometraje, transmisión, estado y otros detalles"></textarea></div>
+<div class="full"><button class="btn" type="submit">ENVIAR DATOS POR WHATSAPP →</button></div>
+</form>
+<p style="font-size:11px;color:#92969e">Al enviar, se abrirá WhatsApp con la información que ingresaste. No se guarda en esta página.</p>
 </section>
 <section>
-  <div class="section-title"><h2>¿POR QUÉ URBAN MOTORS?</h2><div class="line"></div></div>
-  <div class="features">
-    <div class="feature"><div>🛡️</div><strong>CONFIANZA</strong><p>Atención clara y responsable.</p></div>
-    <div class="feature"><div>🤝</div><strong>TRANSPARENCIA</strong><p>Comunicación durante el proceso.</p></div>
-    <div class="feature"><div>🚘</div><strong>ATENCIÓN PERSONALIZADA</strong><p>Te acompañamos en cada paso.</p></div>
-  </div>
+<div class="section-title"><h2>¿POR QUÉ URBAN MOTORS?</h2><div class="line"></div></div>
+<div class="features">
+<div class="feature"><div>🛡️</div><strong>CONFIANZA</strong><p>Atención clara y responsable.</p></div>
+<div class="feature"><div>🤝</div><strong>TRANSPARENCIA</strong><p>Comunicación durante el proceso.</p></div>
+<div class="feature"><div>🚘</div><strong>ATENCIÓN PERSONALIZADA</strong><p>Te acompañamos en cada paso.</p></div>
+</div>
 </section>
 </main>
 <footer><strong>URBAN MOTORS CR</strong><p>Vehículos seleccionados · Costa Rica 🇨🇷</p><p>© 2026 Urban Motors CR. Todos los derechos reservados.</p></footer>
 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=50662364204" target="_blank" rel="noopener">WhatsApp ↗</a>
 <dialog id="carDialog"><button class="dialog-close" id="closeDialog" type="button">Cerrar ✕</button><div id="carDetailsContent"></div></dialog>
 <script>
-/* INVENTARIO: agreguen los vehículos reales en este arreglo.
-   Cada foto debe estar subida al repositorio, por ejemplo: imagenes/toyota-rav4-1.jpg */
 const vehicles = [
-  // Ejemplo de estructura (copiar y completar; no es un vehículo publicado):
-  // {id:"toyota-rav4-2020",brand:"Toyota",model:"RAV4",year:2020,price:8500000,
-  //  mileage:"65.000 km",transmission:"Automática",fuel:"Gasolina",engine:"2.0 L",
-  //  description:"Descripción del vehículo.",photos:["imagenes/rav4-1.jpg","imagenes/rav4-2.jpg"]}
+{
+id:"toyota-land-cruiser-prado-vx-platinum-2016",
+brand:"Toyota",
+model:"Land Cruiser Prado VX Platinum",
+year:2016,
+price:18300000,
+mileage:"Consultar",
+transmission:"Automática",
+fuel:"Diésel",
+engine:"Turbo diésel",
+description:"SUV de alta gama que combina comodidad, elegancia y desempeño en ciudad y terrenos exigentes. Versión VX Platinum con tracción 4x4, asientos de cuero, timón multifuncional, amplio espacio interior y capacidad todoterreno. Una opción para quienes buscan lujo, comodidad, potencia y la reconocida confiabilidad Toyota. Consultá disponibilidad y coordiná directamente los detalles con el vendedor.",
+photos:[
+"imagenes/toyota-prado-2016-portada.jpg",
+"imagenes/toyota-prado-2016-01.jpg",
+"imagenes/toyota-prado-2016-02.jpg",
+"imagenes/toyota-prado-2016-03.jpg",
+"imagenes/toyota-prado-2016-04.jpg",
+"imagenes/toyota-prado-2016-05.jpg"
+]
+}
 ];
 const grid=document.getElementById('inventoryGrid');
 const brandFilter=document.getElementById('brandFilter');
@@ -99,34 +110,34 @@ const yearFilter=document.getElementById('yearFilter');
 const money=n=>'₡'+Number(n).toLocaleString('es-CR');
 const waBase='https://api.whatsapp.com/send?phone=50662364204&text=';
 function populateFilters(){
-  [...new Set(vehicles.map(v=>v.brand))].sort().forEach(b=>brandFilter.add(new Option(b,b)));
-  [...new Set(vehicles.map(v=>v.year))].sort((a,b)=>b-a).forEach(y=>yearFilter.add(new Option(y,y)));
+[...new Set(vehicles.map(v=>v.brand))].sort().forEach(b=>brandFilter.add(new Option(b,b)));
+[...new Set(vehicles.map(v=>v.year))].sort((a,b)=>b-a).forEach(y=>yearFilter.add(new Option(y,y)));
 }
 function render(){
-  const q=document.getElementById('search').value.trim().toLowerCase();
-  let list=vehicles.filter(v=>(!brandFilter.value||v.brand===brandFilter.value)&&(!yearFilter.value||String(v.year)===yearFilter.value)&&(`${v.brand} ${v.model}`.toLowerCase().includes(q)));
-  if(document.getElementById('priceFilter').value==='asc')list.sort((a,b)=>a.price-b.price);
-  if(document.getElementById('priceFilter').value==='desc')list.sort((a,b)=>b.price-a.price);
-  if(!list.length){grid.innerHTML=`<div class="empty"><div class="icon">🚘</div><h3>${vehicles.length?'NO HAY RESULTADOS':'PRÓXIMAMENTE'}</h3><p>${vehicles.length?'Probá cambiar los filtros de búsqueda.':'Estamos preparando nuestro catálogo de vehículos seleccionados. Consultanos por WhatsApp.'}</p><a class="btn" href="${waBase+encodeURIComponent('Hola Urban Motors, quisiera consultar por vehículos disponibles.')}">CONSULTAR POR WHATSAPP</a></div>`;return;}
-  grid.innerHTML=list.map(v=>`<article class="car-card">
-    <img class="car-photo" src="${v.photos?.[0]||''}" alt="${v.brand} ${v.model}" loading="lazy" onerror="this.style.display='none'">
-    <div class="car-info"><h3>${v.brand} ${v.model}</h3><div class="car-meta"><span>${v.year}</span><span>${v.mileage||'Kilometraje consultar'}</span><span>${v.transmission||'Transmisión consultar'}</span></div>
-    <div class="car-price">${money(v.price)}</div><div class="car-actions"><button class="btn" onclick="showDetails('${v.id}')">VER DETALLES</button><a class="btn" href="${waBase+encodeURIComponent('Hola Urban Motors, me interesa el '+v.brand+' '+v.model+' '+v.year+'. ¿Me brindan más información?')}" target="_blank" rel="noopener">WHATSAPP</a></div></div></article>`).join('');
+const q=document.getElementById('search').value.trim().toLowerCase();
+let list=vehicles.filter(v=>(!brandFilter.value||v.brand===brandFilter.value)&&(!yearFilter.value||String(v.year)===yearFilter.value)&&(`${v.brand} ${v.model}`.toLowerCase().includes(q)));
+if(document.getElementById('priceFilter').value==='asc')list.sort((a,b)=>a.price-b.price);
+if(document.getElementById('priceFilter').value==='desc')list.sort((a,b)=>b.price-a.price);
+if(!list.length){grid.innerHTML=`<div class="empty"><div class="icon">🚘</div><h3>NO HAY RESULTADOS</h3><p>Probá cambiar los filtros de búsqueda. Consultanos por WhatsApp.</p><a class="btn" href="${waBase+encodeURIComponent('Hola Urban Motors, quisiera consultar por vehículos disponibles.')}">CONSULTAR POR WHATSAPP</a></div>`;return;}
+grid.innerHTML=list.map(v=>`<article class="car-card">
+<img class="car-photo" src="${v.photos[0]}" alt="${v.brand} ${v.model}" loading="lazy">
+<div class="car-info"><h3>${v.brand} ${v.model}</h3><div class="car-meta"><span>${v.year}</span><span>${v.mileage}</span><span>${v.transmission}</span></div>
+<div class="car-price">${money(v.price)}</div><div class="car-actions"><button class="btn" onclick="showDetails('${v.id}')">VER DETALLES</button><a class="btn" href="${waBase+encodeURIComponent('Hola Urban Motors, me interesa el '+v.brand+' '+v.model+' '+v.year+'. ¿Me brindan más información?')}" target="_blank" rel="noopener">WHATSAPP</a></div></div></article>`).join('');
 }
 function showDetails(id){
-  const v=vehicles.find(x=>x.id===id);if(!v)return;
-  const photos=(v.photos||[]).map(p=>`<img src="${p}" alt="${v.brand} ${v.model}" loading="lazy">`).join('');
-  document.getElementById('carDetailsContent').innerHTML=`<div class="tag">URBAN MOTORS CR</div><h2>${v.brand} ${v.model} ${v.year}</h2><div class="car-price">${money(v.price)}</div><div class="detail-gallery">${photos}</div><div class="detail-specs">
-  <div><b>AÑO</b>${v.year}</div><div><b>KILOMETRAJE</b>${v.mileage||'Consultar'}</div><div><b>TRANSMISIÓN</b>${v.transmission||'Consultar'}</div><div><b>COMBUSTIBLE</b>${v.fuel||'Consultar'}</div><div><b>MOTOR</b>${v.engine||'Consultar'}</div></div><p>${v.description||''}</p><a class="btn" target="_blank" rel="noopener" href="${waBase+encodeURIComponent('Hola Urban Motors, me interesa el '+v.brand+' '+v.model+' '+v.year+'. ¿Podrían brindarme información?')}">CONSULTAR ESTE VEHÍCULO POR WHATSAPP →</a>`;
-  document.getElementById('carDialog').showModal();
+const v=vehicles.find(x=>x.id===id);if(!v)return;
+const photos=(v.photos||[]).map(p=>`<img src="${p}" alt="${v.brand} ${v.model}" loading="lazy">`).join('');
+document.getElementById('carDetailsContent').innerHTML=`<div class="tag">URBAN MOTORS CR</div><h2>${v.brand} ${v.model} ${v.year}</h2><div class="car-price">${money(v.price)}</div><div class="detail-gallery">${photos}</div><div class="detail-specs">
+<div><b>AÑO</b>${v.year}</div><div><b>KILOMETRAJE</b>${v.mileage}</div><div><b>TRANSMISIÓN</b>${v.transmission}</div><div><b>COMBUSTIBLE</b>${v.fuel}</div><div><b>MOTOR</b>${v.engine}</div><div><b>TRACCIÓN</b>4x4</div></div><p>${v.description}</p><a class="btn" target="_blank" rel="noopener" href="${waBase+encodeURIComponent('Hola Urban Motors, me interesa el '+v.brand+' '+v.model+' '+v.year+'. ¿Podrían brindarme información?')}">CONSULTAR ESTE VEHÍCULO POR WHATSAPP →</a>`;
+document.getElementById('carDialog').showModal();
 }
 document.getElementById('closeDialog').addEventListener('click',()=>document.getElementById('carDialog').close());
 ['search','brandFilter','yearFilter','priceFilter'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render));
 document.getElementById('sellerForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const val=id=>document.getElementById(id).value.trim();
-  const msg=`Hola Urban Motors CR. Quiero ofrecer mi vehículo para promoción.\n\nNombre: ${val('ownerName')}\nTeléfono: ${val('ownerPhone')}\nVehículo: ${val('carMake')} ${val('carModel')}\nAño: ${val('carYear')}\nPrecio esperado: ${val('carPrice')||'Por definir'}\nDetalles: ${val('carDetails')||'No indicados'}`;
-  window.open(waBase+encodeURIComponent(msg),'_blank','noopener');
+e.preventDefault();
+const val=id=>document.getElementById(id).value.trim();
+const msg=`Hola Urban Motors CR. Quiero ofrecer mi vehículo para promoción.\n\nNombre: ${val('ownerName')}\nTeléfono: ${val('ownerPhone')}\nVehículo: ${val('carMake')} ${val('carModel')}\nAño: ${val('carYear')}\nPrecio esperado: ${val('carPrice')||'Por definir'}\nDetalles: ${val('carDetails')||'No indicados'}`;
+window.open(waBase+encodeURIComponent(msg),'_blank','noopener');
 });
 populateFilters();render();
 </script>
