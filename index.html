@@ -8,89 +8,387 @@
 <title>Urban Motors CR | Catálogo de vehículos</title>
 
 <style>
-:root{--red:#e32636;--black:#090a0c;--card:#15171b;--white:#f6f6f6;--gray:#a4a7ad;--line:#292b30;--green:#20c66b}
+:root{
+--red:#e32636;
+--black:#090a0c;
+--card:#15171b;
+--white:#f6f6f6;
+--gray:#a4a7ad;
+--line:#292b30;
+--green:#20c66b
+}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif}
+body{
+margin:0;
+background:var(--black);
+color:var(--white);
+font-family:Arial,Helvetica,sans-serif
+}
+
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit}
 
-header{position:sticky;top:0;z-index:20;background:rgba(9,10,12,.97);border-bottom:1px solid var(--line);padding:15px max(5%,calc((100% - 1200px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{font-size:20px;font-weight:900;letter-spacing:1px;white-space:nowrap}
+header{
+position:sticky;
+top:0;
+z-index:20;
+background:rgba(9,10,12,.97);
+border-bottom:1px solid var(--line);
+padding:15px max(5%,calc((100% - 1200px)/2));
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+
+.brand{
+font-size:20px;
+font-weight:900;
+letter-spacing:1px;
+white-space:nowrap
+}
+
 .brand span{color:var(--red)}
-nav{display:flex;gap:24px;font-size:13px;font-weight:bold}
+
+nav{
+display:flex;
+gap:24px;
+font-size:13px;
+font-weight:bold
+}
+
 nav a:hover{color:var(--red)}
 
-.hero{min-height:510px;padding:90px max(7%,calc((100% - 1150px)/2));display:flex;align-items:center;background:linear-gradient(90deg,#090a0c 4%,rgba(9,10,12,.88) 48%,rgba(9,10,12,.25)),url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=85") center/cover}
-.hero-content{max-width:650px}
-.tag{color:var(--red);letter-spacing:4px;font-size:12px;font-weight:bold}
-h1{font-size:clamp(40px,7vw,76px);line-height:1.02;margin:18px 0}
-h1 span,.sell h2 span{color:var(--red)}
-.hero p{color:#d0d0d0;line-height:1.7;max-width:480px}
+.hero{
+min-height:510px;
+padding:90px max(7%,calc((100% - 1150px)/2));
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,#090a0c 4%,rgba(9,10,12,.88) 48%,rgba(9,10,12,.25)),
+url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=85")
+center/cover
+}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;margin:12px 8px 0 0;border:0;border-radius:5px;background:var(--red);color:white;font-weight:bold;font-size:13px;cursor:pointer}
+.hero-content{max-width:650px}
+
+.tag{
+color:var(--red);
+letter-spacing:4px;
+font-size:12px;
+font-weight:bold
+}
+
+h1{
+font-size:clamp(40px,7vw,76px);
+line-height:1.02;
+margin:18px 0
+}
+
+h1 span,.sell h2 span{color:var(--red)}
+
+.hero p{
+color:#d0d0d0;
+line-height:1.7;
+max-width:480px
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 20px;
+margin:12px 8px 0 0;
+border:0;
+border-radius:5px;
+background:var(--red);
+color:white;
+font-weight:bold;
+font-size:13px;
+cursor:pointer
+}
+
 .btn:hover{filter:brightness(1.12)}
 .btn.outline{background:transparent;border:1px solid white}
 
-section{padding:72px max(6%,calc((100% - 1180px)/2))}
-.section-title{text-align:center;margin-bottom:32px}
-.section-title h2{font-size:clamp(25px,4vw,34px);margin:0 0 10px}
-.section-title p{color:var(--gray);font-size:14px}
-.line{width:55px;height:3px;background:var(--red);margin:15px auto}
+section{
+padding:72px max(6%,calc((100% - 1180px)/2))
+}
 
-.filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 25px}
-.field{width:100%;background:#101216;border:1px solid #363940;border-radius:6px;padding:13px;color:white;min-width:0}
-.field:focus{outline:1px solid var(--red);border-color:var(--red)}
+.section-title{
+text-align:center;
+margin-bottom:32px
+}
 
-.inventory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.car-card{background:var(--card);border:1px solid var(--line);border-radius:11px;overflow:hidden;transition:transform .2s,border-color .2s}
-.car-card:hover{transform:translateY(-4px);border-color:#555}
-.car-photo{width:100%;height:230px;object-fit:cover;background:#222;display:block}
+.section-title h2{
+font-size:clamp(25px,4vw,34px);
+margin:0 0 10px
+}
+
+.section-title p{
+color:var(--gray);
+font-size:14px
+}
+
+.line{
+width:55px;
+height:3px;
+background:var(--red);
+margin:15px auto
+}
+
+.filters{
+display:grid;
+grid-template-columns:repeat(4,minmax(0,1fr));
+gap:12px;
+margin:0 0 25px
+}
+
+.field{
+width:100%;
+background:#101216;
+border:1px solid #363940;
+border-radius:6px;
+padding:13px;
+color:white;
+min-width:0
+}
+
+.field:focus{
+outline:1px solid var(--red);
+border-color:var(--red)
+}
+
+.inventory-grid{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:20px
+}
+
+.car-card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:11px;
+overflow:hidden;
+transition:transform .2s,border-color .2s
+}
+
+.car-card:hover{
+transform:translateY(-4px);
+border-color:#555
+}
+
+.car-photo{
+width:100%;
+height:230px;
+object-fit:cover;
+background:#222;
+display:block
+}
+
 .car-info{padding:18px}
-.car-info h3{margin:0 0 8px;font-size:19px}
-.car-price{font-size:21px;font-weight:900;color:var(--red);margin:10px 0}
-.car-meta{display:flex;flex-wrap:wrap;gap:8px;color:var(--gray);font-size:12px}
-.car-meta span{background:#202329;padding:6px 8px;border-radius:4px}
-.car-actions{display:flex;gap:8px;margin-top:15px}
-.car-actions .btn{flex:1;margin:0;padding:12px 8px;font-size:11px}
 
-.empty{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:34px 20px;text-align:center;grid-column:1/-1}
+.car-info h3{
+margin:0 0 8px;
+font-size:19px
+}
+
+.car-price{
+font-size:21px;
+font-weight:900;
+color:var(--red);
+margin:10px 0
+}
+
+.car-meta{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+color:var(--gray);
+font-size:12px
+}
+
+.car-meta span{
+background:#202329;
+padding:6px 8px;
+border-radius:4px
+}
+
+.car-actions{
+display:flex;
+gap:8px;
+margin-top:15px
+}
+
+.car-actions .btn{
+flex:1;
+margin:0;
+padding:12px 8px;
+font-size:11px
+}
+
+.empty{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:12px;
+padding:34px 20px;
+text-align:center;
+grid-column:1/-1
+}
+
 .empty .icon{font-size:38px}
-.empty p{color:var(--gray);line-height:1.65;font-size:14px;max-width:520px;margin:10px auto}
 
-.sell{background:linear-gradient(120deg,#17191e,#090a0c);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.empty p{
+color:var(--gray);
+line-height:1.65;
+font-size:14px;
+max-width:520px;
+margin:10px auto
+}
+
+.sell{
+background:linear-gradient(120deg,#17191e,#090a0c);
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+text-align:center
+}
+
 .sell h2{font-size:clamp(28px,5vw,43px)}
 .sell p{color:#c1c1c1;line-height:1.7}
 
-.seller-form{max-width:760px;margin:28px auto 0;text-align:left;display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.seller-form label{font-size:12px;color:#d5d5d5;display:block;margin-bottom:7px}
+.seller-form{
+max-width:760px;
+margin:28px auto 0;
+text-align:left;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:13px
+}
+
+.seller-form label{
+font-size:12px;
+color:#d5d5d5;
+display:block;
+margin-bottom:7px
+}
+
 .seller-form .full{grid-column:1/-1}
 .seller-form textarea{min-height:100px;resize:vertical}
 .seller-form .btn{width:100%;margin:0}
 
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:950px;margin:auto}
-.feature{text-align:center;background:var(--card);padding:25px 12px;border-radius:9px;border:1px solid var(--line)}
-.feature strong{display:block;margin:10px 0}
-.feature p{color:var(--gray);font-size:13px}
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+max-width:950px;
+margin:auto
+}
 
-footer{padding:38px 20px;text-align:center;color:var(--gray);font-size:13px;border-top:1px solid var(--line)}
+.feature{
+text-align:center;
+background:var(--card);
+padding:25px 12px;
+border-radius:9px;
+border:1px solid var(--line)
+}
+
+.feature strong{
+display:block;
+margin:10px 0
+}
+
+.feature p{
+color:var(--gray);
+font-size:13px
+}
+
+footer{
+padding:38px 20px;
+text-align:center;
+color:var(--gray);
+font-size:13px;
+border-top:1px solid var(--line)
+}
+
 footer strong{color:white}
 
-.whatsapp{position:fixed;right:18px;bottom:18px;z-index:25;background:var(--green);color:#07130c;font-weight:bold;padding:14px 18px;border-radius:40px;box-shadow:0 5px 22px #0009}
+.whatsapp{
+position:fixed;
+right:18px;
+bottom:18px;
+z-index:25;
+background:var(--green);
+color:#07130c;
+font-weight:bold;
+padding:14px 18px;
+border-radius:40px;
+box-shadow:0 5px 22px #0009
+}
 
-dialog{width:min(760px,94vw);max-height:90vh;overflow:auto;background:#111318;color:white;border:1px solid #454951;border-radius:12px;padding:24px}
+dialog{
+width:min(760px,94vw);
+max-height:90vh;
+overflow:auto;
+background:#111318;
+color:white;
+border:1px solid #454951;
+border-radius:12px;
+padding:24px
+}
+
 dialog::backdrop{background:#000c}
-.dialog-close{float:right;background:none;border:1px solid #555;color:white;border-radius:5px;padding:7px 10px;cursor:pointer}
-.detail-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:18px 0}
-.detail-gallery img{width:100%;height:190px;object-fit:cover;border-radius:6px}
-.detail-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
-.detail-specs div{background:#202329;padding:12px;border-radius:6px;font-size:13px}
-.detail-specs b{display:block;color:var(--gray);font-size:11px;margin-bottom:5px}
+
+.dialog-close{
+float:right;
+background:none;
+border:1px solid #555;
+color:white;
+border-radius:5px;
+padding:7px 10px;
+cursor:pointer
+}
+
+.detail-gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+margin:18px 0
+}
+
+.detail-gallery img{
+width:100%;
+height:190px;
+object-fit:cover;
+border-radius:6px
+}
+
+.detail-specs{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:9px
+}
+
+.detail-specs div{
+background:#202329;
+padding:12px;
+border-radius:6px;
+font-size:13px
+}
+
+.detail-specs b{
+display:block;
+color:var(--gray);
+font-size:11px;
+margin-bottom:5px
+}
 
 @media(max-width:800px){
 .inventory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .filters{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
 @media(max-width:560px){
 header{padding:13px 4%;gap:10px}
 .brand{font-size:15px}
@@ -116,6 +414,7 @@ section{padding:55px 5%}
 
 <header>
 <a class="brand" href="#inicio">URBAN MOTORS <span>CR.</span></a>
+
 <nav aria-label="Navegación principal">
 <a href="#inicio">INICIO</a>
 <a href="#inventario">INVENTARIO</a>
@@ -128,14 +427,18 @@ section{padding:55px 5%}
 <section class="hero" id="inicio">
 <div class="hero-content">
 <div class="tag">COSTA RICA 🇨🇷</div>
+
 <h1>ENCONTRÁ TU<br>PRÓXIMO <span>VEHÍCULO.</span></h1>
+
 <p>Vehículos seleccionados, atención personalizada y confianza en cada negocio.</p>
+
 <a class="btn" href="#inventario">VER INVENTARIO →</a>
 <a class="btn outline" href="#vender">VENDER MI VEHÍCULO</a>
 </div>
 </section>
 
 <section id="inventario">
+
 <div class="section-title">
 <div class="tag">URBAN MOTORS CR</div>
 <h2>NUESTRO INVENTARIO</h2>
@@ -145,8 +448,15 @@ section{padding:55px 5%}
 
 <div class="filters">
 <input class="field" id="search" type="search" placeholder="Buscar marca o modelo...">
-<select class="field" id="brandFilter"><option value="">Todas las marcas</option></select>
-<select class="field" id="yearFilter"><option value="">Todos los años</option></select>
+
+<select class="field" id="brandFilter">
+<option value="">Todas las marcas</option>
+</select>
+
+<select class="field" id="yearFilter">
+<option value="">Todos los años</option>
+</select>
+
 <select class="field" id="priceFilter">
 <option value="">Ordenar por precio</option>
 <option value="asc">Menor precio</option>
@@ -155,59 +465,96 @@ section{padding:55px 5%}
 </div>
 
 <div class="inventory-grid" id="inventoryGrid"></div>
+
 </section>
 
 <section class="sell" id="vender">
+
 <div class="tag">SERVICIO DE VENTA</div>
+
 <h2>¿QUERÉS VENDER <span>TU VEHÍCULO?</span></h2>
-<p>Nosotros te ayudamos a promocionarlo y encontrar un comprador.<br>Completá los datos y conversamos por WhatsApp.</p>
+
+<p>
+Nosotros te ayudamos a promocionarlo y encontrar un comprador.<br>
+Completá los datos y conversamos por WhatsApp.
+</p>
 
 <form class="seller-form" id="sellerForm">
+
 <div>
 <label for="ownerName">Tu nombre *</label>
 <input class="field" id="ownerName" required placeholder="Nombre y apellido">
 </div>
+
 <div>
 <label for="ownerPhone">Tu teléfono *</label>
 <input class="field" id="ownerPhone" required type="tel" placeholder="8888-8888">
 </div>
+
 <div>
 <label for="carMake">Marca *</label>
 <input class="field" id="carMake" required placeholder="Ej. Toyota">
 </div>
+
 <div>
 <label for="carModel">Modelo *</label>
 <input class="field" id="carModel" required placeholder="Ej. RAV4">
 </div>
+
 <div>
 <label for="carYear">Año *</label>
 <input class="field" id="carYear" required type="number" min="1950" max="2035" placeholder="Ej. 2020">
 </div>
+
 <div>
 <label for="carPrice">Precio esperado (₡)</label>
 <input class="field" id="carPrice" inputmode="numeric" placeholder="Ej. 8500000">
 </div>
+
 <div class="full">
 <label for="carDetails">Información adicional</label>
 <textarea class="field" id="carDetails" placeholder="Kilometraje, transmisión, estado y otros detalles"></textarea>
 </div>
+
 <div class="full">
 <button class="btn" type="submit">ENVIAR DATOS POR WHATSAPP →</button>
 </div>
+
 </form>
 
-<p style="font-size:11px;color:#92969e">Al enviar, se abrirá WhatsApp con la información que ingresaste. No se guarda en esta página.</p>
+<p style="font-size:11px;color:#92969e">
+Al enviar, se abrirá WhatsApp con la información que ingresaste. No se guarda en esta página.
+</p>
+
 </section>
 
 <section>
+
 <div class="section-title">
 <h2>¿POR QUÉ URBAN MOTORS?</h2>
 <div class="line"></div>
 </div>
+
 <div class="features">
-<div class="feature"><div>🛡️</div><strong>CONFIANZA</strong><p>Atención clara y responsable.</p></div>
-<div class="feature"><div>🤝</div><strong>TRANSPARENCIA</strong><p>Comunicación durante el proceso.</p></div>
-<div class="feature"><div>🚘</div><strong>ATENCIÓN PERSONALIZADA</strong><p>Te acompañamos en cada paso.</p></div>
+
+<div class="feature">
+<div>🛡️</div>
+<strong>CONFIANZA</strong>
+<p>Atención clara y responsable.</p>
+</div>
+
+<div class="feature">
+<div>🤝</div>
+<strong>TRANSPARENCIA</strong>
+<p>Comunicación durante el proceso.</p>
+</div>
+
+<div class="feature">
+<div>🚘</div>
+<strong>ATENCIÓN PERSONALIZADA</strong>
+<p>Te acompañamos en cada paso.</p>
+</div>
+
 </div>
 </section>
 
@@ -219,7 +566,10 @@ section{padding:55px 5%}
 <p>© 2026 Urban Motors CR. Todos los derechos reservados.</p>
 </footer>
 
-<a class="whatsapp" href="https://api.whatsapp.com/send?phone=50662364204" target="_blank" rel="noopener">WhatsApp ↗</a>
+<a class="whatsapp"
+href="https://api.whatsapp.com/send?phone=50662364204"
+target="_blank"
+rel="noopener">WhatsApp ↗</a>
 
 <dialog id="carDialog">
 <button class="dialog-close" id="closeDialog" type="button">Cerrar ✕</button>
@@ -242,17 +592,44 @@ mileage:"Consultar",
 transmission:"Automática",
 fuel:"Diésel",
 engine:"Turbo diésel",
+traction:"4x4",
+
 description:"Toyota Land Cruiser Prado VX Platinum 2016. SUV de alta gama que combina lujo, comodidad y excelente desempeño tanto en ciudad como en terrenos exigentes. Motor turbo diésel, tracción 4x4, transmisión automática, asientos de cuero, timón multifuncional, amplio espacio interior y excelente capacidad todoterreno. Una opción para quienes buscan lujo, comodidad, potencia y la reconocida confiabilidad Toyota. Consultá por más información y coordiná los detalles con el vendedor original.",
+
 photos:[
-"foto prado 1.jpeg",
-"foto prado 2.jpeg",
-"foto prado 3.jpeg",
-"foto prado 4.jpeg",
-"foto prado 5.jpeg"
+"foto%20prado%201.jpeg",
+"foto%20prado%202.jpeg",
+"foto%20prado%203.jpeg",
+"foto%20prado%204.jpeg",
+"foto%20prado%205.jpeg"
+]
+},
+
+{
+id:"honda-s2000-ap1-2003",
+brand:"Honda",
+model:"S2000 AP1",
+year:2003,
+price:13500000,
+mileage:"Consultar",
+transmission:"Manual",
+fuel:"Gasolina",
+engine:"2.0L",
+traction:"Trasera",
+
+description:"Honda S2000 AP1 año 2003. Deportivo japonés con excelente presentación y modificaciones seleccionadas. Cuenta con suspensión completa BC Racing nueva, aros originales japoneses ENKEI RPF1 17x9, AEM intake, headers de acero inoxidable Skunk2 y muffler Skunk2. Incluye bumper delantero AP2 con entrada de aire en carbono, bumper trasero AP2 y consola AP2. Dekra vigente hasta 2027 y documentación al día a nombre del propietario. Precio: ₡13.500.000. Se vende o se recibe vehículo 4x4 o vehículo de interés. Consultá para más información y coordiná directamente con el vendedor.",
+
+photos:[
+"Amarillo%20portada%201.jpeg",
+"amarillo%202.jpeg",
+"amarillo%203.jpeg",
+"amarillo%204.jpeg",
+"amarillo%205.jpeg"
 ]
 }
 
 ];
+
 
 /* FUNCIONES DEL CATÁLOGO */
 
@@ -263,6 +640,9 @@ const yearFilter=document.getElementById('yearFilter');
 const money=n=>'₡'+Number(n).toLocaleString('es-CR');
 
 const waBase='https://api.whatsapp.com/send?phone=50662364204&text=';
+
+
+/* CARGAR FILTROS */
 
 function populateFilters(){
 
@@ -275,6 +655,9 @@ function populateFilters(){
 .forEach(y=>yearFilter.add(new Option(y,y)));
 
 }
+
+
+/* MOSTRAR VEHÍCULOS */
 
 function render(){
 
@@ -292,6 +675,7 @@ list.sort((a,b)=>a.price-b.price);
 if(document.getElementById('priceFilter').value==='desc')
 list.sort((a,b)=>b.price-a.price);
 
+
 if(!list.length){
 
 grid.innerHTML=`
@@ -305,6 +689,7 @@ grid.innerHTML=`
 return;
 
 }
+
 
 grid.innerHTML=list.map(v=>`
 
@@ -329,20 +714,24 @@ onerror="this.alt='Fotografía no disponible';this.style.background='#292b30'">
 <div class="car-price">${money(v.price)}</div>
 
 <div class="car-actions">
-<button class="btn" onclick="showDetails('${v.id}')">VER DETALLES</button>
+
+<button class="btn" onclick="showDetails('${v.id}')">
+VER DETALLES
+</button>
 
 <a class="btn"
 href="${waBase+encodeURIComponent('Hola Urban Motors, me interesa el '+v.brand+' '+v.model+' '+v.year+'. ¿Me brindan más información?')}"
 target="_blank"
 rel="noopener">WHATSAPP</a>
-</div>
 
+</div>
 </div>
 </article>
 
 `).join('');
 
 }
+
 
 /* VENTANA CON DETALLES Y FOTOGRAFÍAS */
 
@@ -355,6 +744,7 @@ if(!v)return;
 const photos=(v.photos||[]).map(p=>`
 <img src="${p}" alt="${v.brand} ${v.model}" loading="lazy">
 `).join('');
+
 
 document.getElementById('carDetailsContent').innerHTML=`
 
@@ -369,11 +759,16 @@ document.getElementById('carDetailsContent').innerHTML=`
 <div class="detail-specs">
 
 <div><b>AÑO</b>${v.year}</div>
+
 <div><b>KILOMETRAJE</b>${v.mileage}</div>
+
 <div><b>TRANSMISIÓN</b>${v.transmission}</div>
+
 <div><b>COMBUSTIBLE</b>${v.fuel}</div>
+
 <div><b>MOTOR</b>${v.engine}</div>
-<div><b>TRACCIÓN</b>4x4</div>
+
+<div><b>TRACCIÓN</b>${v.traction}</div>
 
 </div>
 
@@ -392,11 +787,13 @@ document.getElementById('carDialog').showModal();
 
 }
 
+
 /* CERRAR VENTANA */
 
 document.getElementById('closeDialog').addEventListener('click',()=>{
 document.getElementById('carDialog').close();
 });
+
 
 /* FILTROS */
 
@@ -406,6 +803,7 @@ id==='search'?'input':'change',
 render
 )
 );
+
 
 /* FORMULARIO PARA OFRECER VEHÍCULOS */
 
@@ -427,6 +825,7 @@ Detalles: ${val('carDetails')||'No indicados'}`;
 window.open(waBase+encodeURIComponent(msg),'_blank','noopener');
 
 });
+
 
 /* INICIAR CATÁLOGO */
 
